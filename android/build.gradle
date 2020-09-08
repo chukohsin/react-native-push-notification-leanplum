@@ -57,5 +57,5 @@ dependencies {
     implementation 'com.facebook.react:react-native:+'
     implementation 'me.leolin:ShortcutBadger:1.1.22@aar'
     implementation "com.google.firebase:firebase-messaging:${safeExtGet('firebaseMessagingVersion', '+')}"
-    implementation 'com.leanplum:leanplum-fcm:+'
+    implementation "com.leanplum:leanplum-fcm:${safeExtGet('leanplumVersion', '+')}"
 }

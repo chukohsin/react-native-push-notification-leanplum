@@ -1,7 +1,17 @@
-# React Native Push Notifications
 
-[![npm version](https://badge.fury.io/js/react-native-push-notification.svg?update=9)](http://badge.fury.io/js/react-native-push-notification)
-[![npm downloads](https://img.shields.io/npm/dm/react-native-push-notification.svg?update=9)](http://badge.fury.io/js/react-native-push-notification)
+# This package is forked from @zo0r/react-native-push-notification specifically for the use case of handling Android push notifications through Leanplum.
+
+## Customizing Leanplum SDK version (Android):
+
+This fork exposes an additional confirguration allowing you to specify the version of the Android Leanplum SDK to use. Add the following to your project's android/build.gradle file:
+
+```
+ext {
+    leanplumVersion = "<Your Leanplum version>" // default: "+"
+}
+```
+
+# The original package's README is below:
 
 React Native Local and Remote Notifications for iOS and Android
 
