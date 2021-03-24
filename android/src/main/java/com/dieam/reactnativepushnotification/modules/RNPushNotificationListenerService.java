@@ -25,7 +25,6 @@ public class RNPushNotificationListenerService extends LeanplumPushFirebaseMessa
     @Override
     public void onNewToken(String token) {
         final String deviceToken = token;
-        Log.d(LOG_TAG, "Refreshed token: " + deviceToken);
 
         Handler handler = new Handler(Looper.getMainLooper());
         handler.post(new Runnable() {
