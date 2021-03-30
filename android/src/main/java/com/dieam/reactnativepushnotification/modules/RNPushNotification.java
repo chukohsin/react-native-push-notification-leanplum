@@ -78,7 +78,11 @@ public class RNPushNotification extends ReactContextBaseJavaModule implements Ac
             bundle = intent.getBundleExtra("notification");
         } else if (intent.hasExtra("google.message_id") || intent.hasExtra("lp_messageId")) {
             bundle = intent.getExtras();
-        } else if (intent.getData() != null) {
+        /**
+         * This is used for push notification from Leanplum with deeplink,
+         * which has extras as null, uri as data and includes package name.
+         */
+        } else if (intent.getData() != null && intent.getPackage() != null) {
             intent.putExtra("uri", intent.getData());
             bundle = intent.getExtras();
         }
